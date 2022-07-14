@@ -1,0 +1,679 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: \7b49\7ebf;
+    letter-spacing: 1px;
+    transition: .6s all;
+}
+
+li {
+    list-style: none;
+}
+
+/* 开启bfc */
+.clearfix::before,
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+/* 头部 */
+/* 红色头部 */
+#header_top {
+    width: 100%;
+    height: 50px;
+    background-color: #EC1525;
+    display: flex;
+    justify-content: space-around;
+    position: fixed;
+    z-index: 10000;
+}
+
+/* logo */
+#logo {
+    width: 50px;
+    height: 100%;
+    animation: logo_a 2s linear infinite;
+    position: relative;
+}
+
+@keyframes logo_a {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.Semicircle {
+    width: 7px;
+    height: 14px;
+    border-radius: 7px 0 0 7px;
+    background-color: #FFFFFF;
+    position: absolute;
+}
+
+.Semicircle01 {
+    top: 16%;
+    left: 26%;
+    transform: rotate(-60deg);
+}
+
+.Semicircle02 {
+    top: 24%;
+    left: 50%;
+    transform: rotate(60deg);
+}
+
+.Semicircle03 {
+    top: 58%;
+    left: 46%;
+    transform: rotate(240deg);
+}
+
+.Semicircle04 {
+    top: 24%;
+    left: 56%;
+    transform: rotate(-240deg);
+}
+
+/* 登录注册 */
+#login {
+    color: #FFFFFF;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+}
+
+.lo_text {
+    margin-right: 18px;
+}
+
+#header_top .header_top_search {
+    display: none;
+}
+
+/* 头部海报 */
+#header_banner {
+    margin-top: 50px;
+    width: 100%;
+}
+
+/* 导航栏+搜索 */
+#header_nav {
+    width: 80%;
+    height: 60px;
+    padding-left: 10%;
+    padding-right: 10%;
+    display: flex;
+    justify-content: space-between;
+}
+
+/* 导航栏 */
+#nav {
+    display: flex;
+    width: 480px;
+    height: 100%;
+    font-size: 20px;
+    text-align: center;
+    line-height: 58px;
+    color: #303133;
+}
+
+.nav {
+    box-sizing: border-box;
+    height: 100%;
+    width: 25%;
+    border-bottom: 2px solid #FFF;
+}
+
+#nav01 {
+    width: 16%;
+}
+
+#nav05 {
+    display: none;
+}
+
+.nav:hover {
+    background-color: #F6F7FB;
+    border-bottom: 2px solid #F6F7FB;
+}
+
+/* 导航栏选中部分 */
+.nav_activate {
+    color: #EC1525;
+    border-bottom: 2px solid #EC1525;
+}
+
+.nav_activate:hover {
+    border-bottom: 2px solid #EC1525;
+}
+
+#search,
+#search_active {
+    width: 25%;
+    height: 50%;
+    border: 1px solid #DCDFE6;
+    border-radius: 3px;
+    display: flex;
+    align-self: center;
+    align-items: center;
+}
+
+#search_active {
+    border: 1px solid #EC1525;
+}
+
+.input,
+.input:focus,
+.input::placeholder {
+    width: 88%;
+    height: 100%;
+    margin-left: 4%;
+    border: none;
+    outline: none;
+    color: #ADB0B7;
+}
+
+/* 主体部分 */
+main {
+    width: 85%;
+    background-color: #F6F7FB;
+    padding-left: 7.5%;
+    padding-right: 7.5%;
+    padding-bottom: 56px;
+}
+
+/* 课程简介 */
+#Course_introduction {
+    margin-top: 30px;
+    width: 100%;
+    height: 310px;
+    border-radius: 20px;
+    background-color: #FFF;
+    box-shadow: 0 0 13px #d3d3d3;
+}
+
+#Course_introduction_header {
+    box-sizing: border-box;
+    width: 100%;
+    height: 16%;
+    font-size: 20px;
+    color: #303133;
+    display: flex;
+    padding-left: 1.2%;
+    align-items: flex-end;
+}
+
+#Course_introduction_header .text {
+    margin-left: .6%;
+}
+
+#Course_introduction_body {
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+
+#Course_introduction_body div {
+    width: 60%;
+    margin: 3% 3.8%;
+    letter-spacing: .5px;
+    line-height: 30px;
+    color: #303133;
+}
+
+#Course_introduction_body img {
+    width: 28%;
+    height: 65%;
+}
+
+/* 课程内容 + 授课教师→ + 课程概要→↓*/
+#bottom {
+    margin: 35px 0;
+    width: 100%;
+    display: flex;
+}
+
+/* 课程内容 */
+#left {
+    width: 70%;
+    height: 1020px;
+}
+
+/* 授课教师→ + 课程概要→↓ */
+#right {
+    width: 30%;
+    height: 1020px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+#right_top {
+    width: 100%;
+    height: 69%;
+}
+
+#right_bottom {
+    width: 100%;
+    height: 29%;
+}
+
+/* 课程内容！！！！ */
+#Course_content {
+    box-sizing: border-box;
+    width: 92.5%;
+    height: 1020px;
+    padding-left: 2%;
+    padding-right: 2%;
+    border-radius: 20px;
+    background-color: #FFF;
+    box-shadow: 0 0 13px #d3d3d3;
+}
+
+#Course_content_header {
+    width: 100%;
+    height: 5.5%;
+    font-size: 20px;
+    color: #303133;
+    display: flex;
+    align-items: flex-end;
+    flex-wrap: wrap;
+}
+
+#Course_content_header .text {
+    margin-left: 8px;
+}
+
+#Course_content_header .line {
+    height: 1px;
+    width: 100%;
+    background-color: #B7B7B7;
+}
+
+#Course_content_body {
+    width: 100%;
+    height: 88.5%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#Course_content_body .c_c_b {
+    width: 100%;
+    height: 25%;
+    border-bottom: 1px solid #dedede;
+    display: flex;
+}
+
+#Course_content_body .c_c_b .c_c_b_text {
+    box-sizing: border-box;
+    width: 60%;
+    height: 100%;
+    padding-top: 4%;
+    padding-left: 8%;
+}
+
+#Course_content_body .c_c_b .c_c_b_text ul li span {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-radius: 100%;
+    background-color: #EC1525;
+    margin-right: 18px;
+}
+
+#Course_content_body .c_c_b .c_c_b_text ul li {
+    margin-top: 5%;
+    margin-left: 18px;
+    color: #979797;
+}
+
+#Course_content_body #course_content01 .c_c_b_text ul li {
+    margin-top: 6%;
+    margin-left: 18px;
+    color: #979797;
+}
+
+#Course_content_body .c_c_b .c_c_b_text ul li:hover {
+    margin-left: 40px;
+}
+
+#Course_content_body .c_c_b .c_c_b_img {
+    width: 40%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#Course_content_body .c_c_b .c_c_b_img img {
+    width: 65%;
+    height: 67%;
+    border-radius: 20px;
+}
+
+#Course_content_body .c_c_b .c_c_b_img img:hover {
+    width: 70%;
+    height: 74%;
+    border-radius: 20px;
+}
+
+/* 授课教师！！！ */
+#Lecturer {
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    background-color: #FFF;
+    box-shadow: 0 0 13px #d3d3d3;
+}
+
+#Lecturer_header {
+    box-sizing: border-box;
+    width: 100%;
+    height: 8%;
+    padding-left: 6%;
+    padding-right: 6%;
+    font-size: 20px;
+    color: #303133;
+    display: flex;
+    align-items: flex-end;
+}
+
+#Lecturer_header .text {
+    margin-left: 8px;
+}
+
+#Lecturer_body {
+    box-sizing: border-box;
+    margin-top: 6.5%;
+    padding-left: 10%;
+    padding-right: 10%;
+    width: 100%;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+#Lecturer_body .L_b {
+    width: 100%;
+    height: 22%;
+    border: 1px solid #a7a6a6;
+    display: flex;
+}
+
+#Lecturer_body .L_b .L_b_img {
+    width: 38%;
+    height: 100%;
+}
+
+#Lecturer_body .L_b .L_b_text {
+    width: 62%;
+    display: flex;
+    align-items: center;
+}
+
+#Lecturer_body .L_b .L_b_text ul {
+    width: 100%;
+}
+
+.charge {
+    color: #EC1525;
+}
+
+#Lecturer_body .L_b .L_b_text li {
+    width: 100%;
+    margin-bottom: 8px;
+    margin-left: 15%;
+}
+
+/* 课程概要!!! */
+#Course_overview {
+    box-sizing: border-box;
+    padding-left: 6%;
+    padding-right: 6%;
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    background-color: #FFF;
+    box-shadow: 0 0 13px #d3d3d3;
+}
+
+#Course_overview_header {
+    width: 100%;
+    height: 16%;
+    font-size: 20px;
+    color: #303133;
+    display: flex;
+    align-items: flex-end;
+}
+
+#Course_overview_header .text {
+    margin-left: 8px;
+}
+
+#Course_overview_body {
+    margin-top: 10%;
+    width: 100%;
+    height: 60%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+#Course_overview_body .C_o {
+    width: 90px;
+    height: 76px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 14px;
+}
+
+#Course_overview_body .C_o img {
+    width: 90px;
+    height: 56px;
+    border-radius: 10px;
+}
+
+/* 底部 */
+footer {
+    box-sizing: border-box;
+    padding-top: 0.5%;
+    text-align: center;
+    width: 100%;
+    height: 50px;
+    background-color: #EC1525;
+    color: white;
+}
+
+.Mobile {
+    display: none;
+}
+
+/* 响应式 */
+@media screen and (max-width: 1420px) {
+    body {
+        background-color: #F6F7FB;
+    }
+
+    #login {
+        display: none;
+    }
+
+    #header_top .header_top_search {
+        display: flex;
+    }
+
+    #search {
+        width: 78%;
+        height: 60%;
+        background-color: #FFFFFF;
+        align-items: center;
+    }
+
+    .input,
+    .input:focus,
+    .input::placeholder {
+        width: 93%;
+    }
+
+    main {
+        display: none;
+    }
+
+    footer {
+        display: none;
+    }
+
+    #header_nav {
+        display: none;
+    }
+/* 选项卡 */
+    .M_nav li {
+        width: 90px;
+        height: 60px;
+        text-align: center;
+        line-height: 60px;
+        background-color: #F6F7FB;
+        display: inline-block;
+    }
+
+    .M_nav li a {
+        height: 59px;
+        box-sizing: border-box;
+        display: block;
+        color: #303133;
+        text-decoration: none;
+        border-bottom: 3px solid #F6F7FB;
+        z-index: 10;
+    }
+
+    .Mobile {
+        display: block;
+        position: relative;
+        width: 100%;
+        width: ;
+    }
+
+    .nav_content {
+        position: absolute;
+        width: 100%;
+        height: 1000px;
+        background-color: #F6F7FB;
+    }
+
+    #nav1:target,
+    #nav2:target,
+    #nav3:target {
+        z-index: 1;
+    }
+
+    #Course_introduction,
+    #Course_content,
+    #Lecturer {
+        position: absolute;
+        top: 0;
+        height: 1000px;
+        background: none;
+        border-radius: 2px;
+        box-shadow: 0px -1px 5px #E8E9EC;
+        background-color: #F6F7FB;
+        box-sizing: border-box;
+        padding-top: 10px;
+    }
+    #Course_introduction {
+        margin-top: 0px;
+    }
+    #Course_introduction_header {
+        box-sizing: border-box;
+        width: 100%;
+        height: 2%;
+    }
+
+    #Course_introduction_header span {
+        margin-left: 3.8%;
+        color: #303133;
+    }
+
+    #Course_introduction_body div {
+        width: 100%;
+        margin: 1% 3.8%;
+    }
+    #Course_content{
+        width: 100%;
+    }
+    #Course_content_body .c_c_b .c_c_b_text {
+        padding-top: 1%;
+    }
+
+    #Course_content_body .c_c_b .c_c_b_text ul li {
+        margin-top: 4%;
+    }
+
+    #Lecturer_body {
+        height: 500px;
+        margin-top: 0;
+    }
+
+    #Lecturer_body .L_b .L_b_img {
+        width: 110px;
+        height: 110px;
+    }
+
+    #Lecturer_body .L_b .L_b_text {
+        width: 90%;
+    }
+    #Lecturer_body .L_b .L_b_text li {
+        width: auto;
+        margin-left: 0;
+        padding: 0 30%;
+        box-sizing: border-box;
+        margin-bottom: 8px;
+    }
+    #M_footer{
+        width: 100%;
+        height: 60px;
+        background-color: #FFF;
+        position: fixed;
+        bottom: 0;
+        z-index: 1000;
+        display: flex;
+    }
+    #M_footer .M_F{
+        width: 100%;
+        height: 100%;
+        text-align: center;
+    }
+    #M_footer .M_F .M_F_A{
+        color: #EC1525;
+    }
+}
+@media screen and (max-width: 1000px){
+    #Course_content_body .c_c_b .c_c_b_text ul li {
+        margin-top: 5%;
+    }
+}
+@media screen and (max-width: 420px){
+    #Course_content_body .c_c_b .c_c_b_text {
+        padding-left: 0; 
+    }
+    #Course_content_body .c_c_b .c_c_b_img img {
+        width: 100%;
+        height: 68%;
+    }
+    #Course_content_body .c_c_b .c_c_b_img img:hover{
+        width: 110%;
+        height: 72%;
+    }
+    #Lecturer_body .L_b .L_b_text li {
+        padding: 0 5%;
+    }
+}
